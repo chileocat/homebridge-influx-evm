@@ -5,9 +5,10 @@ const InfluxDB = require('influx');
 const TEMPERATURE_SENSOR_NAME = 'temperature';
 const HUMIDITY_SENSOR_NAME = 'humidity';
 
+
 const getLastMeasurement = (influx, service, schema, cb) => {
   influx
-    .query(`SELECT LAST("${schema[service].field}") FROM ${schema[service].measurement} WHERE "hostname" = '${schema[service].hostname}'`)
+    .query(`SELECT LAST("${schema[service].field}") FROM "${schema[service].measurement}" WHERE ("hostname" = '${schema[service].hostname}')`)
     .then(result => cb(null, result[0] == null ? -1 : result[0].last))
     .catch(err => cb(err));
 };
