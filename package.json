@@ -1,0 +1,33 @@
+{
+  "name": "homebridge-influx-evm",
+  "version": "0.2.0",
+  "description": "A Homebridge plugin that exposes environment data from influxdb",
+  "license": "MIT",
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "influxdb",
+    "temperature",
+    "humidity"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "homebridge": ">=1.0.0"
+  },
+  "author": "Benjamin Schlageter (https://github.com/chileocat)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chileocat/homebridge-influx-evm.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@chileocat"
+  },
+  "dependencies": {
+    "influx": "^5.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/chileocat/homebridge-influx-evm/issues"
+  },
+  "homepage": "https://github.com/chileocat/homebridge-influx-evm#readme",
+  "main": "index.js"
+}
